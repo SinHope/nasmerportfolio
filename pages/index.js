@@ -1,53 +1,105 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
+import AboutMe from "./aboutme.js";
+import MySkills from "./myskills.js";
+import WorkExperience from "./workexperience.js";
+
+
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Nasmer Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div>
+        
+            <div className={styles.sidenav}>
+            <img src="\profilephoto.png" alt="Profile Photo" className={styles.profilephoto}></img>
+            <h1 className={styles.profilename}>Nasmer Fontanilla</h1>
+            <p className={styles.motto}>Aspring Developer In Singapore</p>
+              <div>
+                <ul className={styles.ul}>
+                    <p className={styles.sections}>Home</p>
+                    <p className={styles.sections}>About</p>
+                    <p className={styles.sections}>Skills</p>
+                    <p className={styles.sections}>Experience</p>
+                    <p className={styles.sections}>Education</p>
+                    <p className={styles.sections}>Projects</p>
+                    <p className={styles.sections}>Contact</p>
+                </ul>
+              
+              </div>
+            </div>
+          </div>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <div>
+        <section className={styles.portfolio}>
+          <div>
+            <h1 className={styles.title}>
+            Hi! 
+            <br></br>
+            <a href="https://www.linkedin.com/in/nasmer-fontanilla-b0a010108/" target="_blank">I'm Nasmer</a>
+            </h1>
+          </div>
+          <div>
+            <img src="\bluefinmaldivesnas1.jpg" alt="bluefinmaldivesnas1" className={styles.homephoto1}></img>
+            <img src="\bikelastnas1.jpg" alt="bikelastnas1" className={styles.homephoto2}></img>
+          </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+            <p className={styles.description}>
+          Word Hard. Play Hard. <br></br>Live life to the fullest <br></br> with positivity.
+            </p>    
+            <p className={styles.portfoliofooter}>
+            Built with NextJS
             </p>
-          </a>
+          <div className={styles.dlcv}>
+            <ul className={styles.liststyle}>
+              <li><a href="https://www.mediafire.com/file/cgwja5bsm0khkok/COVER+LETTER+280922.docx/file" target="_blank" className={styles.dlcv2}>Download My CV</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <div className={styles.tabs}>
+          <section>
+            
+            <h3>About Me <span className={styles.sectionem}>Who Am I</span></h3>
+            <div>
+              <AboutMe />
+            </div>
+            
+          </section>
+          
+          <section className={styles.space1} >
+            
+            <h3>My Specialty <span className={styles.sectionem}>My Skills</span></h3>
+            <div>
+              <MySkills />
+            </div>
+            
+          </section>
+          
+          <section className={styles.space1} >
+            
+            <h3>Experience <span className={styles.sectionem}>Work Experience</span></h3>
+            <div>
+              <WorkExperience />
+            </div>
+            
+          </section>
+            
+          <section className={styles.space1}>
+            
+            <h3>Deploy &rarr;</h3>
+            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
+            
+          </section>
+            
         </div>
-      </main>
+      </div>
 
       <footer>
         <a
