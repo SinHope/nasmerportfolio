@@ -4,7 +4,11 @@ module.exports = {
     "./pages/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quicksand: "'Quicksand', serif",
+      },
+    },
   },
   plugins: [],
 }
