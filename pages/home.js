@@ -17,8 +17,8 @@ const Home1 = (props) => {
             </p><p className="mt-[10px] ml-[420px] italic">
                 Built with NextJS
             </p><div className="mt-[10px] ml-[420px]">
-                <ul className="border-solid border-2 border-emerald-500 w-36 bg-emerald-200 shadow-2xl ">
-                    <li className="text-center ml-[0px] hover:text-lg font-serif hover:text-rose-900 hover:font-black transition-all"><a href="https://www.mediafire.com/file/cgwja5bsm0khkok/COVER+LETTER+280922.docx/file" target="_blank">Download My CV</a></li>
+                <ul className="cursor-grabbingborder-solid border-2 border-emerald-500 w-36 bg-emerald-200 shadow-2xl ">
+                    <li className="cursor-grabbing text-center ml-[0px] hover:text-lg font-serif hover:text-rose-900 hover:font-black transition-all"><a href="https://www.mediafire.com/file/cgwja5bsm0khkok/COVER+LETTER+280922.docx/file" target="_blank">Download My CV</a></li>
                 </ul>
             </div></>
     );

@@ -17,14 +17,14 @@ const Education = () => {
   return (
     <div >
       <h4 className="italic">**Click on each sub-section to toggle the visibility of the details.**</h4>
-      <h1 onClick={() => toggleDetails('marketing')} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center font-semibold border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Diploma in Marketing</h1>
+      <h1 onClick={() => toggleDetails('marketing')} className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center font-semibold border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Diploma in Marketing</h1>
       {showMarketingDetails && (
         <div>
           <h3>Graduated From Temasek Polytechnic</h3>
           <h3>High appraisal from internship company. Asked me to come back to work for them but I declined</h3>
         </div>
       )}
-      <h1 onClick={() => toggleDetails('o-levels')} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110text-center font-semibold border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">'O' Levels Singapore Cambridge</h1>
+      <h1 onClick={() => toggleDetails('o-levels')} className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110text-center font-semibold border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">'O' Levels Singapore Cambridge</h1>
       {showOLevelDetails && (
         <div>
           <h3>Graduated From Changkat Changi Secondary School</h3>

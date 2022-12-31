@@ -28,15 +28,15 @@ const Contact = (props) => {
   return (
     <form ref={form} onSubmit={sendEmail}>
       <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Name</label>
-      <input type="text" name="namee" className="border-solid border-2 border-violet-900" />
+      <input type="text" name="namee" className="cursor-text border-solid border-2 border-violet-900" />
       <br></br>
       <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Email</label>
-      <input type="email" name="email" className="border-solid border-2 border-violet-900" />
+      <input type="email" name="email" className="cursor-text border-solid border-2 border-violet-900" />
       <br></br>
       <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Message</label>
-      <textarea name="message" className="border-solid border-2 border-violet-900" />
+      <textarea name="message" className="cursor-text border-solid border-2 border-violet-900" />
       <br></br>
-      <input className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl" type="submit" value="Send" />
+      <input className="cursor-pointer border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl" type="submit" value="Send" />
     </form>
   );
 };
