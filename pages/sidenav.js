@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from 'react';
+import Link from 'next/link';
+import AboutMe from "./aboutme.js";
 
 
 
@@ -11,8 +12,8 @@ const SideNav = (props) => {
             <p className="text-center">Aspring Developer In Singapore</p>
               <div>
                 <ul className="list-none">
-                    <p className="font-quicksand font-bold text-center mt-[50px]">Home</p>
-                    <p className="font-quicksand font-bold text-center mt-[30px]">About</p>
+                    <Link href="/" smooth={true} duration={1000} className="scroll-smooth"><p className="font-quicksand font-bold text-center mt-[50px]">Home</p></Link>
+                    <Link href="/aboutme"><p className="font-quicksand font-bold text-center mt-[30px]">About</p></Link>
                     <p className="font-quicksand font-bold text-center mt-[30px]">Skills</p>
                     <p className="font-quicksand font-bold text-center mt-[30px]">Experience</p>
                     <p className="font-quicksand font-bold text-center mt-[30px]">Education</p>
