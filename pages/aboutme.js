@@ -5,7 +5,7 @@ import React from 'react';
 const AboutMe = (props) => {
     return (
         <div>
-            <p className="leading-10 mt-[20px] font-medium">Hello! My name is Nasmer Fontanilla, but you may know me as <br></br>
+            <p className="leading-10 mt-[20px] font-medium motion-safe:animate-fadeIn">Hello! My name is Nasmer Fontanilla, but you may know me as <br></br>
              FishingWithNas from my social media
              accounts. I was born in <br></br> 
              Singapore, and the Philippines is my second home. However, I <br></br>

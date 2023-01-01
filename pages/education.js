@@ -15,7 +15,7 @@ const Education = () => {
   }
 
   return (
-    <div >
+    <div className="motion-safe:animate-fadeIn">
       <h4 className="italic">**Click on each sub-section to toggle the visibility of the details.**</h4>
       <h1 onClick={() => toggleDetails('marketing')} className="cursor-pointer transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center font-semibold border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Diploma in Marketing</h1>
       {showMarketingDetails && (

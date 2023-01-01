@@ -8,24 +8,14 @@ import Projects from "./projects.js";
 import Contact from "./contact.js";
 import SideNav from "./sidenav.js";
 import Home1 from "./home.js";
-import Link from 'next/link';
-import React from 'react'; 
+import {Link} from "react-scroll";
+import React, { useState } from 'react'; 
 
-const handleClick = (event) => {
-  event.preventDefault()
-
-  const element = event.target.getAttribute('href')
-  const target = document.querySelector(element)
-
-   
-      target.scrollIntoView({
-      behavior: 'smooth',
-      duration: 1000
-    })
-  }
 
 
 export default function Home() {
+
+  
   return (
     
     <div className={styles.container}>
@@ -35,20 +25,20 @@ export default function Home() {
         <meta name="pageTransition" content="fade 1000" />
       </Head>
 
-      <div className="">
+      <div className="motion-safe:animate-fadeIn">
       <div className="w-[360px] block fixed float-left overflow-y-scroll h-full bg-emerald-100 top-0 right-0 left-0">
             <img src="\profilephoto.png" alt="Profile Photo" className="h-48 w-80 rounded-full mt-12 bg-white ml-[18px]"></img>
             <h1 className="font-quicksand font-black text-4xl text-center text-teal-900">Nasmer Fontanilla</h1>
             <p className="text-center">Aspring Developer In Singapore</p>
               <div aria-expanded="false">
                 <ul className="list-none">
-                    <a href="#home1" onClick={handleClick} className="scroll-smooth transition duration-700"><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[50px] duration-300">Home</p></a>
-                    <a href="#aboutme" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">About</p></a>
-                    <a href="#skills" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Skills</p></a>
-                    <a href="#experience" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Experience</p></a>
-                    <a href="#education" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Education</p></a>
-                    <a href="#projects" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Projects</p></a>
-                    <a href="#contact" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Contact</p></a>
+                    <Link to="home1" spy={true} smooth={true} offset={-200} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[50px] duration-300">Home</p></Link>
+                    <Link to="aboutme" spy={true} smooth={true} offset={-60} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">About</p></Link>
+                    <Link to="skills" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Skills</p></Link>
+                    <Link to="experience" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Experience</p></Link>
+                    <Link to="education" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Education</p></Link>
+                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Projects</p></Link>
+                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Contact</p></Link>
                 </ul>
               
               </div>
@@ -66,7 +56,7 @@ export default function Home() {
         <div className="mt-[300px] ml-[420px]">
           <section>
             
-            <h3 id="aboutme" className="font-bold text-2xl">About Me <span className="font-black text-4xl">Who Am I</span></h3>
+            <h3 id="aboutme" className="font-bold text-2xl motion-safe:animate-fadeIn js-show-on-scroll">About Me <span className="font-black text-4xl">Who Am I</span></h3>
             <div>
               <AboutMe />
             </div>
@@ -75,7 +65,7 @@ export default function Home() {
           
           <section id="skills" className="mt-[300px]" >
             
-            <h3 className="font-bold text-2xl">My Specialty <span className="font-black text-4xl">My Skills</span></h3>
+            <h3 className="font-bold text-2xl motion-safe:animate-fadeIn js-show-on-scroll">My Specialty <span className="font-black text-4x motion-safe:animate-fadeInl">My Skills</span></h3>
             <div>
               <MySkills />
             </div>
@@ -84,7 +74,7 @@ export default function Home() {
           
           <section id="experience" className="mt-[300px]" >
             
-            <h3 className="font-bold text-2xl">Experience <span className="font-black text-4xl">Work Experience</span></h3>
+            <h3 className="font-bold text-2xl motion-safe:animate-fadeIn">Experience <span className="font-black text-4xl motion-safe:animate-fadeIn">Work Experience</span></h3>
             <div>
               <WorkExperience />
             </div>
@@ -93,7 +83,7 @@ export default function Home() {
             
           <section id="education" className="mt-[300px]">
             
-            <h3 className="font-bold text-2xl">My Studies <span className="font-black text-4xl">Education</span></h3>
+            <h3 className="font-bold text-2xl motion-safe:animate-fadeIn">My Studies <span className="font-black text-4xl motion-safe:animate-fadeIn">Education</span></h3>
             <div>
               <Education />
             </div>
@@ -102,7 +92,7 @@ export default function Home() {
 
           <section id="projects" className="mt-[300px]">
             
-            <h3 className="font-bold text-2xl">Projects <span className="font-black text-4xl">Coding Journal</span></h3>
+            <h3 className="font-bold text-2xl motion-safe:animate-fadeIn">Projects <span className="font-black text-4xl motion-safe:animate-fadeIn">Coding Journal</span></h3>
             <div>
               <Projects />
             </div>
@@ -111,7 +101,7 @@ export default function Home() {
 
           <section id="contact" className="mt-[300px]">
             
-            <h3 className="font-bold text-2xl">Contact<span className="font-black text-4xl"> HIRE ME!</span></h3>
+            <h3 className="font-bold text-2xl motion-safe:animate-fadeIn">Contact<span className="font-black text-4xl motion-safe:animate-fadeIn"> HIRE ME!</span></h3>
             <div>
               <Contact />
             </div>

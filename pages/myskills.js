@@ -3,8 +3,8 @@ import React from 'react';
 
 const MySkills = (props) => {
     return (
-        <div className="grid grid-cols-4 gap-4">
-            <img src="\html5logo.png" alt="html5logo" className="mt-[50px] w-40"></img>
+        <div className="grid grid-cols-4 gap-4 motion-safe:animate-fadeIn">
+            <img src="\html5logo.png" alt="html5logo" className="mt-[50px] w-40 motion-safe:animate-fadeIn"></img>
             <img src="\css3logo.png" alt="css3logo" className="mt-[50px] w-40"></img>
             <img src="\javascriptlogo.png" alt="javascriptlogo" className="mt-[50px] w-40"></img>
             <img src="\bootstraplogo.png" alt="bootstraptlogo" className="mt-[50px] w-40"></img>
