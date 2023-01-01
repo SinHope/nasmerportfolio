@@ -17,13 +17,12 @@ const handleClick = (event) => {
   const element = event.target.getAttribute('href')
   const target = document.querySelector(element)
 
-  if (target) {
     target.scrollIntoView({
       behavior: 'smooth',
       duration: 1000
     })
   }
-}
+
 
 export default function Home() {
   return (
@@ -35,33 +34,33 @@ export default function Home() {
         <meta name="pageTransition" content="fade 1000" />
       </Head>
 
-      <div>
-      <div className="w-[360px] fixed overflow-y-auto h-full bg-emerald-100 top-0 right-0 left-0">
+      <div className="">
+      <div className="w-[360px] block fixed float-left overflow-y-scroll h-full bg-emerald-100 top-0 right-0 left-0">
             <img src="\profilephoto.png" alt="Profile Photo" className="h-48 w-80 rounded-full mt-12 bg-white ml-[18px]"></img>
             <h1 className="font-quicksand font-black text-4xl text-center text-teal-900">Nasmer Fontanilla</h1>
             <p className="text-center">Aspring Developer In Singapore</p>
               <div aria-expanded="false">
                 <ul className="list-none">
-                    <a href="#home1" onClick={handleClick} className="scroll-smooth transition duration-700"><p className="font-quicksand font-bold text-center mt-[50px] duration-300">Home</p></a>
-                    <a href="#aboutme" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">About</p></a>
-                    <a href="#skills" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">Skills</p></a>
-                    <a href="#experience" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">Experience</p></a>
-                    <a href="#education" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">Education</p></a>
-                    <a href="#projects" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">Projects</p></a>
-                    <a href="#contact" smooth={true} duration={1000}><p className="font-quicksand font-bold text-center mt-[30px]">Contact</p></a>
+                    <a href="#home1" onClick={handleClick} className="scroll-smooth transition duration-700"><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[50px] duration-300">Home</p></a>
+                    <a href="#aboutme" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">About</p></a>
+                    <a href="#skills" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Skills</p></a>
+                    <a href="#experience" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Experience</p></a>
+                    <a href="#education" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Education</p></a>
+                    <a href="#projects" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Projects</p></a>
+                    <a href="#contact" smooth={true} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Contact</p></a>
                 </ul>
               
               </div>
             </div>
-            
+            <section id="home1" className="">
+              <div>
+                <Home1 />
+              </div>
+            </section>
           </div>
 
       <div >
-        <section id="home1" className={styles.portfolio}>
-          <div>
-            <Home1 />
-          </div>
-        </section>
+        
 
         <div className="mt-[300px] ml-[420px]">
           <section>

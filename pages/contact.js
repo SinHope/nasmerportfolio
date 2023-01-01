@@ -27,16 +27,16 @@ const Contact = (props) => {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Name</label>
-      <input type="text" name="namee" className="cursor-text border-solid border-2 border-violet-900" />
+      <label className="border-solid border-2 border-violet-900 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Name</label>
+      <input type="text" name="namee" className="hover:h-8 hover:w-96 duration-1000 cursor-text border-solid border-2 border-violet-900 w-80 ml-[30px]" />
       <br></br>
-      <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Email</label>
-      <input type="email" name="email" className="cursor-text border-solid border-2 border-violet-900" />
+      <label className="border-solid border-2 border-violet-900 w-80 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Email</label>
+      <input type="email" name="email" className="hover:h-8 hover:w-96 duration-1000 cursor-text border-solid border-2 border-violet-900 w-80 ml-[34px]" />
       <br></br>
-      <label className="border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Message</label>
-      <textarea name="message" className="cursor-text border-solid border-2 border-violet-900" />
+      <label className="border-solid border-2 border-violet-900 w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl">Message</label>
+      <textarea name="message" className="hover:h-36 hover:w-96 duration-1000 cursor-text border-solid border-2 border-violet-900 h-32 w-80 ml-[10px] " />
       <br></br>
-      <input className="cursor-pointer border-solid border-2 border-violet-900 rounded-full w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl" type="submit" value="Send" />
+      <input className="hover:h-8 duration-1000 hover:text-lg font-sans hover:text-rose-900 hover:font-black transition-all font-black cursor-pointer border-solid border-2 border-violet-900 w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl" type="submit" value="Send" />
     </form>
   );
 };

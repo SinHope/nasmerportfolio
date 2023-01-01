@@ -17,7 +17,7 @@ const WorkExperience = (props) => {
                 <li className="text-center ml-[0px] hover:text-lg font-sans font-extrabold text-lg">Marketing Intern</li>
             </ul>
             <ul className="cursor-grabbing border-solid border-2 border-emerald-500 w-60 bg-emerald-200 shadow-2xl ">
-              <li className="text-center ml-[0px] hover:text-lg font-sans hover:text-rose-900 hover:font-black transition-all font-black"><a  href="https://www.mediafire.com/file/nzx14ahnasnlz6o/Latest_Updated_Resume_As_Of_22nd_December_2022_-_Nasmer_Fontanilla.docx/file" target="_blank" >Download My Resume For FULL Details</a></li>
+              <li className="text-center ml-[0px] duration-1000 hover:text-lg font-sans hover:text-rose-900 hover:font-black transition-all font-black"><a  href="https://www.mediafire.com/file/nzx14ahnasnlz6o/Latest_Updated_Resume_As_Of_22nd_December_2022_-_Nasmer_Fontanilla.docx/file" target="_blank" >Download My Resume For FULL Details</a></li>
             </ul>
           </div>
     );
