@@ -17,7 +17,8 @@ const handleClick = (event) => {
   const element = event.target.getAttribute('href')
   const target = document.querySelector(element)
 
-    target.scrollIntoView({
+   
+      target.scrollIntoView({
       behavior: 'smooth',
       duration: 1000
     })
