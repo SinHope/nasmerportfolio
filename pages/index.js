@@ -9,12 +9,27 @@ import Contact from "./contact.js";
 import SideNav from "./sidenav.js";
 import Home1 from "./home.js";
 import {Link} from "react-scroll";
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 
 
 
 export default function Home() {
 
+  const AnimateOnScroll = () => {
+    useEffect(() => {
+      const animate = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate')
+            observer.unobserve(entry.target)
+          }
+        })
+      }
+  
+      const observer = new IntersectionObserver(animate)
+      const targets = document.querySelectorAll('.animate-on-scroll')
+      targets.forEach(target => observer.observe(target))
+    }, [])
   
   return (
     
@@ -174,4 +189,5 @@ export default function Home() {
       `}</style>
     </div>
   )
+}
 }
