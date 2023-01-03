@@ -3,19 +3,7 @@ import React, { useEffect } from 'react';
 
 
 const Home1 = (props) => {
-    useEffect(() => {
-        const slideshow = document.querySelector('#slideshow');
-const slides = slideshow.querySelectorAll('.slide');
-let currentSlide = 0;
-
-const nextSlide = () => {
-    slides[currentSlide].classList.add('opacity-0');
-    currentSlide = clamp(currentSlide + 1, 0, slides.length - 1);
-    slides[currentSlide].classList.add('opacity-100');
-}
-
-setInterval(nextSlide, 3000); // change slides every 3 seconds
-      }, []);
+    
     return (
         <><div>
             <h1 className="text-left mt-[100px] ml-[420px] text-6xl font-extrabold motion-safe:animate-fadeIn js-show-on-scroll">

@@ -6,10 +6,10 @@ import WorkExperience from "./workexperience.js";
 import Education from "./education.js";
 import Projects from "./projects.js";
 import Contact from "./contact.js";
-import SideNav from "./sidenav.js";
 import Home1 from "./home.js";
 import {Link} from "react-scroll";
 import React, { useState, useEffect } from 'react'; 
+import MainPage from "./preload.js";
 
 
 
@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="pageTransition" content="fade 1000" />
       </Head>
-
+      <MainPage />
       <div className="motion-safe:animate-fadeIn">
       <div className="w-[360px] block fixed float-left overflow-y-scroll h-full bg-emerald-100 top-0 right-0 left-0">
             <img src="\profilephoto.png" alt="Profile Photo" className="h-48 w-80 rounded-full mt-12 bg-white ml-[18px]"></img>
@@ -176,3 +176,4 @@ export default function Home() {
     </div>
   )
 }
+
