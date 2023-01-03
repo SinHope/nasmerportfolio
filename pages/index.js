@@ -15,25 +15,11 @@ import React, { useState, useEffect } from 'react';
 
 export default function Home() {
 
-  const AnimateOnScroll = () => {
-    useEffect(() => {
-      const animate = (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate')
-            observer.unobserve(entry.target)
-          }
-        })
-      }
   
-      const observer = new IntersectionObserver(animate)
-      const targets = document.querySelectorAll('.animate-on-scroll')
-      targets.forEach(target => observer.observe(target))
-    }, [])
   
   return (
     
-    <div className={styles.container}>
+    <div className="">
       <Head>
         <title>Nasmer Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -189,5 +175,4 @@ export default function Home() {
       `}</style>
     </div>
   )
-}
 }

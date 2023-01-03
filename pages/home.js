@@ -1,20 +1,38 @@
-import React from 'react';
-import styles from '../styles/Home.module.css';
+import React, { useEffect } from 'react';
+
 
 
 const Home1 = (props) => {
-    
+    useEffect(() => {
+        const slideshow = document.querySelector('#slideshow');
+const slides = slideshow.querySelectorAll('.slide');
+let currentSlide = 0;
+
+const nextSlide = () => {
+    slides[currentSlide].classList.add('opacity-0');
+    currentSlide = clamp(currentSlide + 1, 0, slides.length - 1);
+    slides[currentSlide].classList.add('opacity-100');
+}
+
+setInterval(nextSlide, 3000); // change slides every 3 seconds
+      }, []);
     return (
-       <><div>
+        <><div>
             <h1 className="text-left mt-[100px] ml-[420px] text-6xl font-extrabold motion-safe:animate-fadeIn js-show-on-scroll">
                 Hi!
                 <br></br>
                 <a className="underline hover:underline-offset-4 text-blue-600 transition-all motion-safe:animate-fadeIn js-show-on-scroll" href="https://www.linkedin.com/in/nasmer-fontanilla-b0a010108/" target="_blank">I'm Nasmer</a>
             </h1>
-        </div><div className="motion-safe:animate-fadeIn">
-                <img src="\bluefinmaldivesnas1.jpg" alt="bluefinmaldivesnas1" className={styles.homephoto1}></img>
-                <img src="\bikelastnas1.jpg" alt="bikelastnas1" className={styles.homephoto2}></img>
-              </div>
+          </div>
+          <div className="motion-safe:animate-fadeIn">
+            <div>
+                <img src="\bluefinmaldivesnas1.jpg" alt="bluefinmaldivesnas1" id="slideshow" className="z-1 w-[500px] fixed ml-[420px] opacity-70 slide"></img>
+            </div>
+            <div>
+                <img src="\bikelastnas1.jpg" alt="bikelastnas1" id="slideshow" className="z-1 w-[460px] fixed ml-[920px] opacity-0 slide"></img>
+            </div>
+                
+          </div>
                 <p className="text-left mt-[40px] ml-[420px] text-2xl font-light motion-safe:animate-fadeIn">
                 Word Hard. Play Hard. <br></br>Live life to the fullest <br></br> with positivity.
                 </p>
