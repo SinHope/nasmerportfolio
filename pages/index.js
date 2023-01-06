@@ -9,7 +9,7 @@ import Contact from "./contact.js";
 import Home1 from "./home.js";
 import {Link} from "react-scroll";
 import React, { useState, useEffect } from 'react'; 
-import MainPage from "./preload.js";
+import MainPage from "../components/preload.js";
 
 
 
@@ -33,13 +33,13 @@ export default function Home() {
             <p className="text-center">Aspring Developer In Singapore</p>
               <div aria-expanded="false">
                 <ul className="list-none">
-                    <Link to="home1" spy={true} smooth={true} offset={-200} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[50px] duration-300">Home</p></Link>
-                    <Link to="aboutme" spy={true} smooth={true} offset={-60} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">About</p></Link>
-                    <Link to="skills" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Skills</p></Link>
-                    <Link to="experience" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Experience</p></Link>
-                    <Link to="education" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Education</p></Link>
-                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Projects</p></Link>
-                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px]">Contact</p></Link>
+                    <Link to="home1" spy={true} smooth={true} offset={-200} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[50px] cursor-pointer">Home</p></Link>
+                    <Link to="aboutme" spy={true} smooth={true} offset={-60} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">About</p></Link>
+                    <Link to="skills" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">Skills</p></Link>
+                    <Link to="experience" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">Experience</p></Link>
+                    <Link to="education" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">Education</p></Link>
+                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">Projects</p></Link>
+                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={1000}><p className="hover:underline decoration-emerald-500 decoration-2 hover:text-2xl underline-offset-8 duration-1000 font-quicksand font-bold text-center mt-[30px] cursor-pointer">Contact</p></Link>
                 </ul>
               
               </div>

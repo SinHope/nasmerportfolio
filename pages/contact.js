@@ -39,9 +39,9 @@ const Contact = (props) => {
           <input className="motion-safe:animate-fadeIn hover:h-8 duration-1000 hover:text-lg font-sans hover:text-rose-900 hover:font-black transition-all font-black cursor-pointer border-solid border-2 border-violet-900 w-60 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl ml-[76px]" type="submit" value="Send" />
       </form>
       <div className="grid grid-cols-4 gap-4 motion-safe:animate-fadeIn">
-        <a href="https://www.linkedin.com/in/nasmer-fontanilla-b0a010108/" target="_blank"><img src="\linkedinlogo1.png" alt="linkedinlogo" className="mt-[50px] w-40"></img></a>
-        <a href="https://www.youtube.com/channel/UCe2iiKDlnL3Rr1N2K-eMQRA" target="_blank"><img src="\youtubelogo.png" alt="youtubelogo" className="mt-[50px] w-40"></img></a>
-        <a href="https://www.tiktok.com/@tiktokwithnas" target="_blank"><img src="\tiktoklogo.png" alt="tiktoklogo" className="mt-[50px] w-40"></img></a>
+        <a href="https://www.linkedin.com/in/nasmer-fontanilla-b0a010108/" target="_blank"><img src="\linkedinlogo1.png" alt="linkedinlogo" className="mt-[50px] w-40 hover:w-48 duration-1000"></img></a>
+        <a href="https://www.youtube.com/channel/UCe2iiKDlnL3Rr1N2K-eMQRA" target="_blank"><img src="\youtubelogo.png" alt="youtubelogo" className="mt-[50px] w-40 hover:w-48 duration-1000"></img></a>
+        <a href="https://www.tiktok.com/@tiktokwithnas" target="_blank"><img src="\tiktoklogo.png" alt="tiktoklogo" className="mt-[50px] w-40 hover:w-48 duration-1000"></img></a>
       </div>
     </>
   );

@@ -4,6 +4,20 @@ import React, { useEffect } from 'react';
 
 const Home1 = (props) => {
     
+    
+        useEffect(() => {
+          const images = document.querySelectorAll('#slideshow');
+          let currentImageIndex = 0;
+      
+          function showNextImage() {
+            images[currentImageIndex].classList.add('opacity-0', 'transition-opacity', 'duration-[3000ms]');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.remove('opacity-0');
+          }
+      
+          setInterval(showNextImage, 5000);
+        }, []); // This empty array ensures that the effect is only run once
+
     return (
         <><div>
             <h1 className="text-left mt-[100px] ml-[420px] text-6xl font-extrabold motion-safe:animate-fadeIn js-show-on-scroll">
@@ -14,7 +28,7 @@ const Home1 = (props) => {
           </div>
           <div className="motion-safe:animate-fadeIn">
             <div>
-                <img src="\bluefinmaldivesnas1.jpg" alt="bluefinmaldivesnas1" id="slideshow" className="z-1 w-[500px] fixed ml-[420px] opacity-70 slide"></img>
+                <img src="\bluefinmaldivesnas1.jpg" alt="bluefinmaldivesnas1" id="slideshow" className="z-1 w-[500px] fixed ml-[420px] opacity-0 slide"></img>
             </div>
             <div>
                 <img src="\bikelastnas1.jpg" alt="bikelastnas1" id="slideshow" className="z-1 w-[460px] fixed ml-[920px] opacity-0 slide"></img>
@@ -34,5 +48,6 @@ const Home1 = (props) => {
                 </div></>
     );
 };
+
 
 export default Home1;
