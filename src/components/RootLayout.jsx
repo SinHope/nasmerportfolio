@@ -67,7 +67,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Contact us
+            Contact me
           </Button>
           <button
             ref={toggleRef}
@@ -122,12 +122,12 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/development">My Work</NavigationItem>
+        <NavigationItem href="/development">About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/development">Updating..</NavigationItem>
+        <NavigationItem href="/development">Updating..</NavigationItem>
       </NavigationRow>
     </nav>
   )

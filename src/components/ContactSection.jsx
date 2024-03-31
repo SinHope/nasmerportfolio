@@ -13,7 +13,7 @@ export function ContactSection() {
               Looking to work with me?
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" invert>
+              <Button href="/contact" className="hover:bg-transparent hover:text-white hover:shadow-[0_0_10px_2px_rgba(8,145,178,0.5)] ease-in-out duration-300" invert>
                 Say Hello
               </Button>
             </div>

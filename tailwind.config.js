@@ -43,6 +43,9 @@ module.exports = {
         sans: ['"Mona Sans"', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'],
         // Other custom fonts can also be added here
       },
+      boxShadow: {
+        white: '0 4px 14px 0 rgba(255, 255, 255, 0.39)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
