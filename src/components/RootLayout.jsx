@@ -123,7 +123,7 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/development">My Work</NavigationItem>
-        <NavigationItem href="/development">About Me</NavigationItem>
+        <NavigationItem href="/about">About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/development">Updating..</NavigationItem>

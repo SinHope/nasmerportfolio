@@ -21,6 +21,8 @@ function ArrowIcon(props) {
 }
 
 function PageLink({ page }) {
+  const currentDate = new Date();
+
   return (
     <article key={page.href}>
       <Border
@@ -28,13 +30,13 @@ function PageLink({ page }) {
         className="relative flex flex-col items-start pl-8"
       >
         <h3 className="mt-6 text-base font-semibold text-neutral-950">
-          {page.title}
+          Hobbies
         </h3>
         <time
-          dateTime={page.date}
-          className="order-first text-sm text-neutral-600"
+         dateTime={currentDate.toISOString()}
+        className="order-first text-sm text-neutral-600"
         >
-          {formatDate(page.date)}
+          Updated as of {formatDate(currentDate)}
         </time>
         <p className="mt-2.5 text-base text-neutral-600">{page.description}</p>
         <Link
