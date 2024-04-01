@@ -8,6 +8,7 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
+import { BackToTopButton } from '@/components/BackToTopButton'
 import imageLaptop from '@/images/laptop.jpg'
 import portfoilioPhoto from '@/images/portfolioimage.jpg'
 import html5 from '@/images/html5.png'
@@ -496,6 +497,8 @@ export default async function Home() {
       <Services />
 
       <ContactSection />
+
+      <BackToTopButton />
     </>
   )
 }
