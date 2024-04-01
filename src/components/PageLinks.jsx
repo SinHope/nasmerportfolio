@@ -20,7 +20,7 @@ function ArrowIcon(props) {
   )
 }
 
-function PageLink({ page }) {
+function PageLink({ page, title }) {
   const currentDate = new Date();
 
   return (
@@ -30,11 +30,11 @@ function PageLink({ page }) {
         className="relative flex flex-col items-start pl-8"
       >
         <h3 className="mt-6 text-base font-semibold text-neutral-950">
-          Hobbies
+          {title}
         </h3>
         <time
-         dateTime={currentDate.toISOString()}
-        className="order-first text-sm text-neutral-600"
+          dateTime={currentDate.toISOString()}
+          className="order-first text-sm text-neutral-600"
         >
           Updated as of {formatDate(currentDate)}
         </time>
@@ -42,7 +42,7 @@ function PageLink({ page }) {
         <Link
           href={page.href}
           className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
-          aria-label={`Read more: ${page.title}`}
+          aria-label={`Read more about ${title}`}
         >
           Read more
           <ArrowIcon className="w-6 flex-none fill-current" />
@@ -50,7 +50,7 @@ function PageLink({ page }) {
         </Link>
       </Border>
     </article>
-  )
+  );
 }
 
 export function PageLinks({ title, pages, intro, className }) {
@@ -71,7 +71,7 @@ export function PageLinks({ title, pages, intro, className }) {
         <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           {pages.map((page) => (
             <FadeIn key={page.href}>
-              <PageLink page={page} />
+              <PageLink page={page} title={page.title} />
             </FadeIn>
           ))}
         </FadeInStagger>

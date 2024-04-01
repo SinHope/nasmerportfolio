@@ -125,7 +125,19 @@ export const metadata = {
 
 export default async function About() {
   let blogArticles = (await loadArticles()).slice(0, 2)
-
+  const customPages = [
+    {
+      href: '/hobbies',
+      title: 'Hobbies',
+      description: 'Exploring my personal interests and activities outside of work.',
+    },
+    {
+      href: '/career-journey',
+      title: 'Career Journey',
+      description: 'A detailed overview of my professional development and key milestones.',
+    },
+  ];
+  const combinedPages = [...blogArticles, ...customPages];
   return (
     <>
       <PageIntro
@@ -168,7 +180,7 @@ export default async function About() {
         className="mt-24 sm:mt-32 lg:mt-40"
         title="My Life"
         intro="Walk through part of my personal life"
-        pages={blogArticles}
+        pages={combinedPages}
       />
 
       <ContactSection />
